@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meet Our Trainers - Stay Strong Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+    .trainer-card {
+      background: #1a1a1a;
+      border: 2px solid #ff0000;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: 0.4s ease-in-out;
+      box-shadow: 0 0 10px #ff0000;
+      position: relative;
+    }
+    .trainer-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000;
+      z-index: 10;
+    }
+    .trainer-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .trainer-info {
+      padding: 1.5rem;
+    }
+    .trainer-name {
+      font-size: 2rem;
+      color: #ff0000;
+      margin-bottom: 0.5rem;
+    }
+    .trainer-role {
+      color: #cccccc;
+      font-size: 1.2rem;
+    }
+    .trainer-bio {
+      color: #aaaaaa;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    .section-title {
+      text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+    }
+  </style>
+</head>
+<body class="p-10">
+  <h1 class="text-6xl text-center text-red-600 section-title mb-16">Meet Our Champions</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+    <div class="trainer-card">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Trainer 1" class="trainer-image">
+      <div class="trainer-info">
+        <div class="trainer-name">RANA UMAR</div>
+        <div class="trainer-role">Bodybuilding Expert</div>
+        <p class="trainer-bio">10+ years of experience in competitive bodybuilding, customized training plans, and stage preparation.</p>
+      </div>
+    </div>
+    <div class="trainer-card">
+      <img src="img5.jpg" alt="Trainer 2" class="trainer-image">
+      <div class="trainer-info">
+        <div class="trainer-name">Ayesha Malik</div>
+        <div class="trainer-role">Cardio & Nutrition Coach</div>
+        <p class="trainer-bio">Certified nutritionist and cardio expert helping clients achieve fat loss and stamina goals efficiently.</p>
+      </div>
+    </div>
+    <div class="trainer-card">
+      <img src="img6.jpg" alt="Trainer 3" class="trainer-image">
+      <div class="trainer-info">
+        <div class="trainer-name">CD-70(hamza)</div>
+        <div class="trainer-role">CrossFit & Strength</div>
+        <p class="trainer-bio">Focused on high-intensity CrossFit programs, muscle strength, and agility improvement for all ages.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stay Strong Gym - Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #ff4444;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .highlight {
+      border: 4px solid #ff0000;
+      box-shadow: 0 0 30px #ff0000;
+    }
+  </style>
+</head>
+<body class="px-6 py-10">
+
+  <!-- Header -->
+  <header class="mb-10 text-center">
+    <h1 class="text-5xl font-bold text-red-500 drop-shadow-xl">🛒 Stay Strong Gym Store</h1>
+    <p class="text-gray-300 mt-2 text-xl">Shop supplements, equipment, and gear!</p>
+  </header>
+
+  <!-- Product and Order Section Side-by-Side -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Product Grid -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg product-card cursor-pointer" onclick="highlightProduct('Whey Protein', '$49.99', 'img/protein1.jpg', 5, 'Muscle gain formula with high protein content.')">
+        <img src="img/protein1.jpg" class="rounded-xl mb-3 w-full h-40 object-cover" />
+        <h3 class="text-xl font-bold text-red-400">Whey Protein</h3>
+        <p class="text-white">$49.99</p>
+        <p class="text-yellow-400">★★★★★</p>
+      </div>
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg product-card cursor-pointer" onclick="highlightProduct('Creatine Powder', '$29.99', 'img/protein2.jpg', 4, 'Supports explosive energy and strength.')">
+        <img src="img/protein2.jpg" class="rounded-xl mb-3 w-full h-40 object-cover" />
+        <h3 class="text-xl font-bold text-red-400">Creatine Powder</h3>
+        <p class="text-white">$29.99</p>
+        <p class="text-yellow-400">★★★★☆</p>
+      </div>
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg product-card cursor-pointer" onclick="highlightProduct('Gym Gloves', '$14.99', 'img/gloves.jpg', 4, 'Padded grip gloves for comfort.')">
+        <img src="img/gloves.jpg" class="rounded-xl mb-3 w-full h-40 object-cover" />
+        <h3 class="text-xl font-bold text-red-400">Gym Gloves</h3>
+        <p class="text-white">$14.99</p>
+        <p class="text-yellow-400">★★★★☆</p>
+      </div>
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg product-card cursor-pointer" onclick="highlightProduct('Treadmill Pro 5000', '$499.99', 'img/treadmill.jpg', 5, 'High-end treadmill with multiple speed modes.')">
+        <img src="img/treadmill.jpg" class="rounded-xl mb-3 w-full h-40 object-cover" />
+        <h3 class="text-xl font-bold text-red-400">Treadmill Pro 5000</h3>
+        <p class="text-white">$499.99</p>
+        <p class="text-yellow-400">★★★★★</p>
+      </div>
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg product-card cursor-pointer" onclick="highlightProduct('BCAA Supplement', '$34.99', 'img/bcaa.jpg', 4, 'Essential aminos for workout recovery.')">
+        <img src="img/bcaa.jpg" class="rounded-xl mb-3 w-full h-40 object-cover" />
+        <h3 class="text-xl font-bold text-red-400">BCAA Supplement</h3>
+        <p class="text-white">$34.99</p>
+        <p class="text-yellow-400">★★★★☆</p>
+      </div>
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg product-card cursor-pointer" onclick="highlightProduct('Dumbbell Set', '$89.99', 'img/dumbbell.jpg', 5, 'Adjustable dumbbell set with rubber grip.')">
+        <img src="img/dumbbell.jpg" class="rounded-xl mb-3 w-full h-40 object-cover" />
+        <h3 class="text-xl font-bold text-red-400">Dumbbell Set</h3>
+        <p class="text-white">$89.99</p>
+        <p class="text-yellow-400">★★★★★</p>
+      </div>
+    </section>
+
+    <!-- Order Form and Highlight -->
+    <section>
+      <!-- Selected Product -->
+      <div id="highlightedProduct" class="mb-8 p-6 bg-gray-800 rounded-xl shadow-xl hidden">
+        <img id="highlightImage" class="w-full h-52 object-cover rounded-xl mb-4" />
+        <h3 id="highlightTitle" class="text-2xl font-bold text-white"></h3>
+        <p id="highlightPrice" class="text-lg text-red-400 font-semibold"></p>
+        <p id="highlightRating" class="text-yellow-400 text-xl"></p>
+        <p id="highlightDesc" class="text-gray-300 mt-2"></p>
+      </div>
+
+      <!-- Order Form -->
+      <form action="https://formspree.io/f/movdanrr" method="POST" class="space-y-6 bg-gray-900 p-6 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-bold text-white mb-4 text-center">Order Now</h2>
+        <div>
+          <label class="block text-white mb-1">Product</label>
+          <select name="product" class="w-full p-3 rounded bg-black text-white border border-red-500">
+            <option>Whey Protein</option>
+            <option>Creatine Powder</option>
+            <option>Gym Gloves</option>
+            <option>Treadmill Pro 5000</option>
+            <option>BCAA Supplement</option>
+            <option>Dumbbell Set</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-white mb-1">Quantity</label>
+          <input type="number" name="quantity" min="1" required class="w-full p-3 rounded bg-black text-white border border-red-500">
+        </div>
+        <div>
+          <label class="block text-white mb-1">Your Message</label>
+          <textarea name="message" rows="4" class="w-full p-3 rounded bg-black text-white border border-red-500" placeholder="Enter address or details..." required></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 bg-red-600 text-white rounded-xl hover:bg-red-800 transition">Send Order</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function highlightProduct(title, price, imgSrc, stars, desc) {
+      document.getElementById('highlightedProduct').classList.remove('hidden');
+      document.getElementById('highlightImage').src = imgSrc;
+      document.getElementById('highlightTitle').textContent = title;
+      document.getElementById('highlightPrice').textContent = price;
+      document.getElementById('highlightRating').textContent = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+      document.getElementById('highlightDesc').textContent = desc;
+    }
+  </script>
+
+</body>
+</html>

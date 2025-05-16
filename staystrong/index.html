@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stay Strong Gym - Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Bebas Neue', cursive, sans-serif;
+    overflow-x: hidden;
+    background-color: #0a0a0a;
+    color: #ff4444;
+  }
+  .slideshow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .slideshow img {
+    position: absolute;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideAnimation 30s infinite;
+  }
+  .slideshow img:nth-child(1) { animation-delay: 0s; }
+  .slideshow img:nth-child(2) { animation-delay: 6s; }
+  .slideshow img:nth-child(3) { animation-delay: 12s; }
+  .slideshow img:nth-child(4) { animation-delay: 18s; }
+  .slideshow img:nth-child(5) { animation-delay: 24s; }
+
+  @keyframes slideAnimation {
+    0% { opacity: 0; transform: scale(1.05); }
+    10% { opacity: 1; transform: scale(1); }
+    30% { opacity: 1; transform: scale(1); }
+    40% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; }
+  }
+  .overlay {
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(40,0,0,0.9));
+    z-index: 0;
+  }
+  header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    box-shadow: 0 0 15px #ff0000cc;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+  }
+  header .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  header img {
+    height: 60px;
+    margin-right: 1rem;
+    filter: drop-shadow(0 0 10px #ff0000);
+  }
+  header h1 {
+    font-size: 2.2rem;
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000;
+    letter-spacing: 4px;
+  }
+  nav a {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    color: #ff6666;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #ffffff;
+  }
+  main {
+    position: relative;
+    z-index: 5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ff4444;
+    padding: 0 2rem;
+  }
+  main h2 {
+    font-size: 5rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 0 30px #ff0000;
+    animation: neonGlow 3s ease-in-out infinite alternate;
+  }
+  main p {
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+    color: #ff6666cc;
+    text-shadow: 0 0 15px #ff4444;
+  }
+  .btn-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  button {
+    background: transparent;
+    border: 3px solid #ff0000;
+    padding: 1.1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: #ff0000;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 0 0 25px #ff0000;
+    transition: all 0.4s ease;
+  }
+  button:hover {
+    background: #ff0000;
+    color: #fff;
+    box-shadow: 0 0 50px #ff0000;
+    transform: scale(1.1);
+  }
+  @keyframes neonGlow {
+    from {
+      text-shadow: 0 0 10px #ff2222, 0 0 20px #ff2222, 0 0 30px #ff2222, 0 0 40px #fff000, 0 0 70px #ff0000;
+    }
+    to {
+      text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 20px #ff4444, 0 0 40px #ff4444, 0 0 70px #ff2222;
+    }
+  }
+  footer {
+    background: #120000;
+    padding: 2rem 3rem;
+    color: #ff6666;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: inset 0 0 15px #ff000033;
+  }
+  .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .social-icons a {
+    color: #ff4444;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #ff0000;
+  }
+  @media (max-width: 640px) {
+    main h2 { font-size: 3.2rem; }
+    main p { font-size: 1.3rem; }
+    button { font-size: 1.1rem; padding: 1rem 2rem; }
+    header h1 { font-size: 1.5rem; }
+  }
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="slideshow">
+  <img src="img5.jpg" alt="Gym 1">
+  <img src="img1.jpg" alt="Gym 2">
+  <img src="img7.jpg" alt="Gym 3">
+  <img src="img8.jpg" alt="Gym 4">
+  <img src="img6.jpg" alt="Gym 5">
+</div>
+<div class="overlay"></div>
+<header>
+  <div class="logo-section">
+    <img src="img10.jpg" alt="Logo">
+    <h1>Stay Strong Gym</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="store.html">store</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="programs.html">Programs</a>
+    <a href="trainer.html">Trainers</a>
+    <a href="membership.html">Plans</a>
+    <a href="testemonials.html">Testemonials</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+</header>
+<main>
+  <h2 class="animate__animated animate__fadeInDown">Unleash Your Inner Strength</h2>
+  <p class="animate__animated animate__fadeInUp">Transform your life today at Stay Strong Gym! World-class trainers, state-of-the-art equipment, and a passionate community await you.</p>
+  <div class="btn-container animate__animated animate__fadeInUp animate__delay-1s">
+    <button onclick="location.href='signup.html'">Join Now</button>
+    <button onclick="location.href='contact.html'">Contact Us</button>
+  </div>
+</main>
+<section class="py-20 bg-black text-red-400 text-center">
+  <h3 class="text-4xl font-bold mb-12 animate__animated animate__fadeIn">What Our Members Say</h3>
+  <div class="flex flex-wrap justify-center gap-8">
+    <div class="bg-[#1a0000] rounded-2xl p-6 w-80 shadow-xl hover:scale-105 transition-transform duration-500 animate__animated animate__fadeInLeft">
+      <p class="italic mb-4">"This gym completely changed my life. Best trainers and amazing vibes!"</p>
+      <h4 class="font-bold">— Ahsan Malik</h4>
+    </div>
+    <div class="bg-[#1a0000] rounded-2xl p-6 w-80 shadow-xl hover:scale-105 transition-transform duration-500 animate__animated animate__fadeInUp">
+      <p class="italic mb-4">"Modern equipment, clean environment, and motivating atmosphere!"</p>
+      <h4 class="font-bold">— Zara Khan</h4>
+    </div>
+    <div class="bg-[#1a0000] rounded-2xl p-6 w-80 shadow-xl hover:scale-105 transition-transform duration-500 animate__animated animate__fadeInRight">
+      <p class="italic mb-4">"Affordable plans and real results. Highly recommended!"</p>
+      <h4 class="font-bold">— Bilal Sheikh</h4>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>Contact us: <a href="tel:+923257421169" class="text-red-400">+923257421169</a> | <a href="mailto:info@staystronggym.com" class="text-red-400">info@staystronggym.com</a></p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+</body>
+</html>

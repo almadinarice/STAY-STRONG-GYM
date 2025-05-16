@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Stay Strong Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+    .gallery-image {
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+      border: 2px solid #ff0000;
+    }
+    .gallery-image:hover {
+      transform: scale(1.1) rotate(-1deg);
+      box-shadow: 0 0 25px #ff0000, 0 0 40px #ff0000;
+      z-index: 10;
+    }
+    .glow-title {
+      text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+    }
+    .gallery-section {
+      position: relative;
+    }
+    .gallery-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,0,0,0.2) 0%, transparent 60%);
+      animation: pulse 6s infinite;
+      z-index: 0;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.2; }
+      50% { opacity: 0.4; }
+      100% { opacity: 0.2; }
+    }
+  </style>
+</head>
+<body class="p-10">
+  <h1 class="text-6xl text-center text-red-600 glow-title mb-12">Our Gym In Action</h1>
+
+  <div class="gallery-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto z-10 relative">
+    <img src="img3.jpg" alt="Workout 1" class="gallery-image rounded-xl">
+    <img src="img4.jpg" alt="Workout 2" class="gallery-image rounded-xl">
+    <img src="img6.jpg" alt="Workout 3" class="gallery-image rounded-xl">
+    <img src="img7.jpg" alt="Gym Training" class="gallery-image rounded-xl">
+    <img src="img8.jpg" alt="Cardio Session" class="gallery-image rounded-xl">
+    <img src="img5.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img6.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img10.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img1.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img2.webp" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img8.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img5.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+    <img src="img4.jpg" alt="Personal Coaching" class="gallery-image rounded-xl">
+  </div>
+</body>
+</html>

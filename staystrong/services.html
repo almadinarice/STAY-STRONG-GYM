@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services - Stay Strong Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s ease;
+      background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+      border: 1px solid #ff0000;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, #ff0000 0%, transparent 60%);
+      animation: rotate 6s linear infinite;
+      opacity: 0.05;
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000 inset;
+    }
+    .icon {
+      font-size: 50px;
+      color: #ff0000;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    }
+  </style>
+</head>
+<body class="p-10">
+  <!-- Header -->
+  <h1 class="text-6xl text-center text-red-600 section-title mb-12">Our Premium Services</h1>
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="service-card p-6 rounded-xl text-center">
+      <div class="icon">💪</div>
+      <h2 class="text-2xl text-white mb-2">Strength Training</h2>
+      <p class="text-gray-400 text-sm">Build muscle, boost endurance, and gain raw power with guided equipment and routines.</p>
+    </div>
+    <div class="service-card p-6 rounded-xl text-center">
+      <div class="icon">🏃‍♂️</div>
+      <h2 class="text-2xl text-white mb-2">Cardio Programs</h2>
+      <p class="text-gray-400 text-sm">Burn fat and energize yourself with our treadmill, HIIT, and spin bike routines.</p>
+    </div>
+    <div class="service-card p-6 rounded-xl text-center">
+      <div class="icon">🍎</div>
+      <h2 class="text-2xl text-white mb-2">Nutrition Plans</h2>
+      <p class="text-gray-400 text-sm">Custom meal plans tailored to your body goals, prepared by certified dieticians.</p>
+    </div>
+    <div class="service-card p-6 rounded-xl text-center">
+      <div class="icon">🧘‍♀️</div>
+      <h2 class="text-2xl text-white mb-2">Yoga & Flexibility</h2>
+      <p class="text-gray-400 text-sm">Improve your balance, flexibility, and mental health with calming yoga sessions.</p>
+    </div>
+    <div class="service-card p-6 rounded-xl text-center">
+      <div class="icon">🧠</div>
+      <h2 class="text-2xl text-white mb-2">Mind & Motivation</h2>
+      <p class="text-gray-400 text-sm">Our mindset coaches help you stay focused and beat gym anxiety and burnout.</p>
+    </div>
+    <div class="service-card p-6 rounded-xl text-center">
+      <div class="icon">👨‍👩‍👧‍👦</div>
+      <h2 class="text-2xl text-white mb-2">Family Plans</h2>
+      <p class="text-gray-400 text-sm">Special group classes and packages for couples, kids, and family members.</p>
+    </div>
+  </div>
+</body>
+</html>

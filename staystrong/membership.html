@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Join Now - Stay Strong Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background: #0f0f0f;
+      color: white;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .plan-card {
+      background: #1a1a1a;
+      border: 3px solid #ff0000;
+      border-radius: 1.5rem;
+      flex: 1 1 300px;
+      max-width: 350px;
+      padding: 2rem;
+      box-shadow: 0 0 15px #ff0000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .plan-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 50px #ff0000, 0 0 80px #ff0000;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .plan-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #ff0000;
+      letter-spacing: 2px;
+    }
+    .price {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ff1a1a;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 20px #ff0000;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+    .features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+    }
+    .btn-join {
+      background: transparent;
+      border: 2px solid #ff0000;
+      color: #ff0000;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 0.75rem 0;
+      border-radius: 9999px;
+      text-align: center;
+      transition: background 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .btn-join:hover {
+      background: #ff0000;
+      color: #0f0f0f;
+      box-shadow: 0 0 40px #ff0000;
+    }
+    .stats-section {
+      background: #1a1a1a;
+      border: 3px solid #ff0000;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 0 20px #ff0000;
+      margin-bottom: 3rem;
+    }
+    .stat {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ff1a1a;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 20px #ff0000;
+    }
+    .stat-label {
+      font-size: 1.2rem;
+      color: #ccc;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .faq-section {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: #1a1a1a;
+      border: 2px solid #ff0000;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 0 10px #ff0000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .faq-item:hover {
+      background: #330000;
+    }
+    .faq-question {
+      font-weight: 700;
+      color: #ff0000;
+      font-size: 1.2rem;
+    }
+    .faq-answer {
+      color: #ccc;
+      margin-top: 0.5rem;
+      display: none;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-5xl text-center mb-10">Join Stay Strong Gym Today!</h1>
+
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-title">Basic Plan</div>
+        <div class="price">PKR 1000<span style="font-size:1.25rem;">/month</span></div>
+        <ul class="features">
+          <li>Access to gym equipment</li>
+          <li>1 group class per week</li>
+          <li>Locker room access</li>
+          <li>Free Wi-Fi</li>
+          <li>Standard support</li>
+        </ul>
+        <button class="btn-join">Join Now</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Pro Plan</div>
+        <div class="price">PKR 1500<span style="font-size:1.25rem;">/month</span></div>
+        <ul class="features">
+          <li>All Basic Plan features</li>
+          <li>Unlimited group classes</li>
+          <li>1 Personal training session/month</li>
+          <li>Nutrition consultation</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="btn-join">Join Now</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Elite Plan</div>
+        <div class="price">PKR 2000<span style="font-size:1.25rem;">/month</span></div>
+        <ul class="features">
+          <li>All Pro Plan features</li>
+          <li>Unlimited personal training</li>
+          <li>Custom workout plans</li>
+          <li>Access to VIP lounge</li>
+          <li>24/7 support</li>
+        </ul>
+        <button class="btn-join" ><a href="signup.html"></a> Join Now </button>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <div class="stat">+5000</div>
+      <div class="stat-label">Happy Members</div>
+      <div class="stat">+120</div>
+      <div class="stat-label">Group Classes Weekly</div>
+      <div class="stat">+50</div>
+      <div class="stat-label">Certified Trainers</div>
+    </div>
+
+    <h2 class="text-4xl text-center mb-8">Frequently Asked Questions</h2>
+    <div class="faq-section" id="faq-section">
+      <div class="faq-item">
+        <div class="faq-question">Do I need prior experience to join?</div>
+        <div class="faq-answer">No! Stay Strong Gym welcomes all fitness levels, from beginners to pros.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What are the gym hours?</div>
+        <div class="faq-answer">We’re open 24/7 for your convenience, every day of the week.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I freeze my membership?</div>
+        <div class="faq-answer">Yes, you can pause your membership anytime with no extra fees.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const faqs = document.querySelectorAll('.faq-item');
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

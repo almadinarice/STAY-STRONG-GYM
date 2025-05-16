@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Testimonials - Stay Strong Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+    .testimonial-card {
+      background: #1a1a1a;
+      border: 2px solid #ff0000;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px #ff0000;
+      transition: 0.4s ease-in-out;
+      position: relative;
+    }
+    .testimonial-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000;
+      z-index: 10;
+    }
+    .testimonial-text {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #ccc;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .testimonial-text::before {
+      content: '“';
+      font-size: 3rem;
+      color: #ff0000;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: 'Bebas Neue', cursive;
+    }
+    .testimonial-author {
+      font-weight: 700;
+      color: #ff0000;
+      font-size: 1.1rem;
+      text-align: right;
+    }
+    .section-title {
+      text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+    }
+  </style>
+</head>
+<body class="p-10">
+  <h1 class="text-6xl text-center text-red-600 section-title mb-16">What Our Members Say</h1>
+
+  <div class="max-w-4xl mx-auto">
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        Stay Strong Gym transformed my life! The trainers are amazing, and the environment is super motivating. Highly recommend!
+      </p>
+      <div class="testimonial-author">- Sara Ahmed</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        Best gym in town with top-notch equipment and personal coaching. I gained strength and confidence here.
+      </p>
+      <div class="testimonial-author">- Ahmed Raza</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        The membership plans are affordable and worth every penny. The gym vibe keeps me coming back every day.
+      </p>
+      <div class="testimonial-author">- Fatima Khan</div>
+    </div>
+  </div>
+</body>
+</html>
